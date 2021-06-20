@@ -5,7 +5,7 @@ const path = require('path');
 // const { notes } = require('');//filename?? so we can generate notes
 
 router.get("/api/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "db.json"));
+    res.sendFile(path.join(__dirname, "notes.json"));
 });
 
 router.get("/api/notes/:id", (req, res) => {
@@ -27,5 +27,3 @@ router.post("/api/notes", (req, res) => {
       res.json(note);
     }
 });
-//for this note parameter we will need to give note an id?
-// router.post("/api/notes", function(req, res) {
