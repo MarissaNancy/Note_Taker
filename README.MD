@@ -26,3 +26,5 @@ Then they are presented with empty fields to enter a new note title and the note
 ## Mock Up
 
 ![Here is what my generated page looks like](./public/assets/app.png)
+
+![Here is what my generated page looks like](./public/assets/app1.png)
