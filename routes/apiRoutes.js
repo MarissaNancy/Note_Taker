@@ -4,8 +4,16 @@ const path = require('path');
 
 // const { notes } = require('');//filename?? so we can generate notes
 
-router.get("/api/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "notes.json"));
+// router.get("/api/notes", function(req, res) {
+//     res.sendFile(path.join(__dirname, "notes.json"));
+// });
+
+router.get("/api/notes", (req, res) => {
+  let results = notes;
+  if (req.query) {
+    results = filternotesQuery(req.query, results);
+  }
+  res.json(results);
 });
 
 router.get("/api/notes/:id", (req, res) => {
